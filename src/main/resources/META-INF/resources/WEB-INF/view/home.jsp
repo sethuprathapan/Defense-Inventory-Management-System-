@@ -67,7 +67,7 @@
             />
           </div>
           <div class="form-group">
-            <button type="submit">Signup</button>
+            <button type="submit" onclick="passCrossCheck()">Signup</button>
             
           </div>
           <div class="error" id="signup-error"></div>
