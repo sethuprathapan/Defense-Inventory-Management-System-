@@ -38,13 +38,22 @@
       </div>
       <div id="signup-form" style="display: none">
         <h2>Signup</h2>
-        <form action="signup.php" method="post">
+        <form action="save" method="post">
           <div class="form-group">
             <label for="signup-email">Email</label>
             <input
               type="email"
               id="signup-email"
-              name="signup-email"
+              name="idEmail"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="signup-email">Platoon name</label>
+            <input
+              type="text"
+              id="nameD"
+              name="nameD"
               required
             />
           </div>
@@ -53,7 +62,7 @@
             <input
               type="password"
               id="signup-password"
-              name="signup-password"
+              name="password"
               required
             />
           </div>
