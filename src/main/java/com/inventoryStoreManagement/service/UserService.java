@@ -8,9 +8,17 @@ import com.inventoryStoreManagement.repository.UserRepository;
 
 @Service
 public class UserService {
+	
 @Autowired
 private UserRepository uRepo;
+
+
+
+
 public void save(User u) {
 	uRepo.save(u);
 }
+
+
+
 }

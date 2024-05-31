@@ -17,10 +17,10 @@
       <h1>Inventory Manegement</h1>
       <div id="login-form">
         <h2>Login</h2>
-        <form action="login.php" method="post">
+        <form action="checklogdetails" method="post">
           <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" required />
+            <input type="text" id="username" name="idEmail" required />
           </div>
           <div class="form-group">
             <label for="password">Password</label>

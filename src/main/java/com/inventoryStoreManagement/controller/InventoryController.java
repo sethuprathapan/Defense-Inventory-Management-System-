@@ -15,17 +15,18 @@ import com.inventoryStoreManagement.service.UserService;
 public class InventoryController {
 	
 	
-	@Autowired
-	public UserService userservice;
+@Autowired                  
+public UserService userservice;
 	
-@GetMapping("/home")
-public String home() {
-	return "home";
+@GetMapping("/login")
+public String login() {
+	return "login";
 }
 @PostMapping("/save")
-public String addBook(@ModelAttribute User u){
+public String adduser(@ModelAttribute User u){
 	userservice.save(u);
-	return "redirect:/home";	
+	return "redirect:/login";	
 }
+
 
 }
