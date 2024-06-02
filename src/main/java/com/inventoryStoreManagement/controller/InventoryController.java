@@ -39,13 +39,27 @@ public String adduser(@ModelAttribute User u){
 	userservice.save(u);
 	return "login";	
 }
-
+// @GetMapping("/checklogdetails")
+// public String checklogdetails(HttpSession session ,Model model){
+//	 session.invalidate();
+//	 if(session.getAttribute("user")!=null) {
+//		 //String idEmail=(String)session.getAttribute("user");
+//		 String idEmail="pareekshnam";
+//		 String username=userservice.username(idEmail);
+//		 model.addAttribute("user_name",username);
+//		 return "index";
+//	 }else {
+//	 return "login";
+//	 }
+// }
+ 
 @PostMapping("/checklogdetails")
 public String checklogdetails(@RequestParam("idEmail") String idEmail , @RequestParam("password" )String password ,  HttpSession session ,Model model){
+	 //session.invalidate();
 	if(l.athentication(idEmail, password)) {
 		
 		String username=userservice.username(idEmail);
-		System.out.println(username + "huhuh");
+		//System.out.println(username + "huhuh");
 		session.setAttribute("user" ,idEmail);
 		
 		model.addAttribute("user_name",username);
