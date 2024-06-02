@@ -22,6 +22,12 @@ public void save(User u) {
 	uRepo.save(u);
 }
 
+public String username(String emailid) {
+	User user=uRepo.findById(emailid).get();
+	String res= (String) user.getNameD();
+	return res;
+}
+
 
 
 

@@ -44,13 +44,16 @@ public String adduser(@ModelAttribute User u){
 public String checklogdetails(@RequestParam("idEmail") String idEmail , @RequestParam("password" )String password ,  HttpSession session ,Model model){
 	if(l.athentication(idEmail, password)) {
 		
-		session.setAttribute("user" , idEmail);
-		model.addAttribute("email", idEmail);
+		String username=userservice.username(idEmail);
+		System.out.println(username + "huhuh");
+		session.setAttribute("user" ,idEmail);
+		
+		model.addAttribute("user_name",username);
 		
 		
 		//String s= (String)session.getAttribute("user");
 		//System.out.print(user);
-		return "addOrUpdate";
+		return "index";
 	}
 	else {
 	return "login";	
