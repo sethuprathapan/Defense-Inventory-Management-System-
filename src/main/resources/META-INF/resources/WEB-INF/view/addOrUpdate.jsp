@@ -72,7 +72,7 @@
   </head>
   <body>
     <div class="dashboard-container">
-      <h1>Stock Manegement</h1>
+      <h1>Stock Manegement</h1><h2>hehehheehe ${email} wtf ${session.getAttribute("user")} gub</h2>
       <div>
         <h2>Item Details</h2>
         <div class="item-details" id="itemDetails">

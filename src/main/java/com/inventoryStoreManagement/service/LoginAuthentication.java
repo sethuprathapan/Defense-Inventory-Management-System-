@@ -6,6 +6,8 @@ import org.springframework.stereotype.Service;
 import com.inventoryStoreManagement.entity.User;
 import com.inventoryStoreManagement.repository.UserRepository;
 
+import jakarta.servlet.http.HttpSession;
+
 
 @Service
 public class LoginAuthentication {
@@ -13,14 +15,14 @@ public class LoginAuthentication {
 	@Autowired
 	 UserRepository uRepo;
 	
-	public boolean athentication(String username, String password) {
+	public boolean athentication(String username, String password ) {
 		User u=uRepo.findById(username).get();
 		String email=u.getIdEmail();
 		String pass=u.getPassword();
-		System.out.println(username);
-		System.out.println(password);
+		//System.out.println(username);
+		//System.out.println(password);
 		if(username.equals(email) && password.equals(pass)) {
-			System.out.println("true");
+			
 		return true;
 		
 		}else {
